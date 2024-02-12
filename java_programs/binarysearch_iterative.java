@@ -1,0 +1,42 @@
+import java.util.*;
+
+class binarysearch_iterative 
+{
+    int binarySearch(int arr[], int x) 
+    {
+        int l = 0, r = arr.length - 1;
+        while (l <= r)
+        {
+            int m = l + (r - l) / 2;
+            if (arr[m] == x)
+            {
+                return m;
+            }
+            if (arr[m] < x)
+            {
+                 l = m + 1;
+            }
+            else
+            {
+                r = m - 1;
+            }
+        }
+        return -1;
+    }
+    public static void main(String args[]) {
+        binarysearch_iterative ob = new binarysearch_iterative();
+        Scanner scr = new Scanner(System.in);
+        int arr[] = {2, 3, 4, 10, 40, 5};
+        System.out.print("Enter the value to be searched: ");
+        int x = scr.nextInt();
+        int result = ob.binarySearch(arr, x);
+        if (result == -1)
+        {
+            System.out.println("Element is not present in array");
+        }  
+        else
+        {
+            System.out.println("Element is present at index " + result);
+        }
+    }
+}
