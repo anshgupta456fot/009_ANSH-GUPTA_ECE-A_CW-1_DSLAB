@@ -3,7 +3,7 @@
 int binarySearch(int arr[], int r, int z);
 int main(void)
 {
-	int arr[] = { 2, 3, 4, 10, 40, 5 };
+	int arr[] = { 2, 3, 4, 10, 40, 50 };
 	int n = sizeof(arr) / sizeof(arr[0]);
     int z;
     printf("Enter the element to be searched");
